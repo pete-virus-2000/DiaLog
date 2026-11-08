@@ -1,0 +1,10 @@
+{
+  "name": "DiaLog - Typ-1 Diabetes Manager & Bolusrechner",
+  "description": "Intelligenter Begleiter für Typ-1 Diabetiker: Mahlzeiten erfassen per Foto, Barcode oder manuell, präzise Insulinberechnung (BE, KE, g KH), Korrekturfaktoren, Erinnerungstimer und lückenloses Tagebuch.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

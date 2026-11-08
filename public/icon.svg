@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#020617"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#14b8a6"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background rounded squircle -->
+  <rect width="512" height="512" rx="128" fill="url(#bgGrad)"/>
+  
+  <!-- Outer ring glow -->
+  <circle cx="256" cy="256" r="180" fill="none" stroke="#14b8a6" stroke-width="8" stroke-dasharray="16 12" stroke-opacity="0.4"/>
+
+  <!-- Pulse waveform (Glukose / Herz / Aktivität) -->
+  <path d="M 110 256 L 180 256 L 210 170 L 256 340 L 302 180 L 332 256 L 402 256" 
+        fill="none" 
+        stroke="url(#tealGrad)" 
+        stroke-width="26" 
+        stroke-linecap="round" 
+        stroke-linejoin="round"
+        filter="url(#glow)"/>
+
+  <!-- Insulin drop / target center dot -->
+  <circle cx="256" cy="140" r="18" fill="#14b8a6" filter="url(#glow)"/>
+</svg>
